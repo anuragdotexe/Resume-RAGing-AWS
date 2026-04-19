@@ -12,4 +12,3 @@ def root():
     return {"message": "RAG API is running"}
 
 
-# new 
