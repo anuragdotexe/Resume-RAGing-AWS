@@ -10,3 +10,6 @@ app.include_router(ask_router)
 @app.get("/")
 def root():
     return {"message": "RAG API is running"}
+
+
+# new 
