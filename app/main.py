@@ -12,3 +12,4 @@ def root():
     return {"message": "RAG API is running"}
 
 
+# main entry point for the application. It sets up the FastAPI app and includes the routes for uploading files and asking questions.
