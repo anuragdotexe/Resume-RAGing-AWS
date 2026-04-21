@@ -51,3 +51,30 @@ python -m uvicorn app.main:app --reload
          | S3 KB Storage Bucket        |
          | anurag-rag-kb-storage       |
          +-----------------------------+
+
+
+
+# Updated target architecture
+
+                    +----------------------+
+                    |     User / Client    |
+                    +----------+-----------+
+                               |
+                               v
+                    +----------------------+
+                    |     API Gateway      |
+                    |  Public HTTPS API    |
+                    +----------+-----------+
+                               |
+                               v
+                    +----------------------+
+                    |   AWS Lambda         |
+                    |  FastAPI Backend     |
+                    | (/upload, /ask)      |
+                    +----+------------+----+
+                         |            |
+                         |            |
+                         v            v
+              +----------------+   +-----------------------------+
+              | S3 Input Bucket|   | Bedrock Agent Runtime API   |
+              +----------------+   +-----------------------------+
