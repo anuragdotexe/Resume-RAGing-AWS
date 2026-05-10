@@ -1,4 +1,3 @@
-#new 
 # Resume-RAGing-AWS
 
 
